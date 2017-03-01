@@ -5,7 +5,7 @@ import os
 import olefile
 import oletools.oleid
 
-filename = "PCB-sl13nw6fpl4rim5mrg3x-1.PcbLib"
+filename = "tests/PCB-sl13nw6fpl4rim5mrg3x-1.PcbLib"
 outFolder = "ole"
 
 class DumpOle(object):
