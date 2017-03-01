@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE eagle SYSTEM "eagle.dtd">
+<eagle version="6.6.0">
+<drawing>
+<settings>
+<setting alwaysvectorfont="no"/>
+<setting verticaltext="up"/>
+</settings>
+<grid distance="0.02" unitdist="inch" unit="inch" style="dots" multiple="1" display="yes" altdistance="0.005" altunitdist="inch" altunit="inch"/>
+<layers>
+<layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
+</layers>
+<board>
+<plain>
+</plain>
+<libraries>
+<library name="Aesthetics">
+<description>&lt;img src="http://www.example.com/image.jpg" width="600"&gt;
+&lt;hr&gt;
+&lt;h1&gt;EAGLE Library - Aesthetics&lt;/h1&gt;&lt;/br&gt;
+&lt;p&gt;
+Image Library.
+&lt;/p&gt;</description>
+<packages>
+<package name="WHATX">
+<rectangle x1="0.007621875" y1="0.00761875" x2="0.053340625" y2="0.02285625" layer="1"/>
+<rectangle x1="0.022859375" y1="0.022859375" x2="0.068578125" y2="0.038096875" layer="1"/>
+<rectangle x1="0.007621875" y1="0.0381" x2="0.083821875" y2="0.0533375" layer="1"/>
+<rectangle x1="0.022859375" y1="0.053340625" x2="0.099059375" y2="0.068578125" layer="1"/>
+<rectangle x1="0.007621875" y1="0.068578125" x2="0.114296875" y2="0.083815625" layer="1"/>
+</package>
+</packages>
+</library>
+</libraries>
+<attributes>
+</attributes>
+<variantdefs>
+</variantdefs>
+<classes>
+<class number="0" name="default" width="0" drill="0">
+</class>
+</classes>
+<designrules name="default">
+</designrules>
+<autorouter>
+<pass name="Default">
+</pass>
+<pass name="Follow-me" refer="Default" active="yes">
+</pass>
+<pass name="Busses" refer="Default" active="yes">
+<param name="cfNonPref" value="4"/>
+<param name="cfBusImpact" value="4"/>
+<param name="cfHugging" value="0"/>
+<param name="mnVias" value="0"/>
+</pass>
+<pass name="Route" refer="Default" active="yes">
+</pass>
+<pass name="Optimize1" refer="Default" active="yes">
+<param name="cfVia" value="99"/>
+<param name="cfExtdStep" value="10"/>
+<param name="cfHugging" value="1"/>
+<param name="mnExtdSteps" value="1"/>
+<param name="mnRipupLevel" value="0"/>
+</pass>
+<pass name="Optimize2" refer="Optimize1" active="yes">
+<param name="cfNonPref" value="0"/>
+<param name="cfChangeDir" value="6"/>
+<param name="cfExtdStep" value="0"/>
+<param name="cfBonusStep" value="2"/>
+<param name="cfMalusStep" value="2"/>
+<param name="cfPadImpact" value="2"/>
+<param name="cfSmdImpact" value="2"/>
+<param name="cfHugging" value="0"/>
+</pass>
+<pass name="Optimize3" refer="Optimize2" active="yes">
+<param name="cfChangeDir" value="8"/>
+<param name="cfPadImpact" value="0"/>
+<param name="cfSmdImpact" value="0"/>
+</pass>
+<pass name="Optimize4" refer="Optimize3" active="yes">
+<param name="cfChangeDir" value="25"/>
+</pass>
+</autorouter>
+<elements>
+<element name="U$1" library="Aesthetics" package="WHATX" value="" x="7.62" y="78.74"/>
+</elements>
+<signals>
+</signals>
+</board>
+</drawing>
+</eagle>
