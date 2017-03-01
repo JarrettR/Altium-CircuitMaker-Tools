@@ -1,10 +1,11 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
+import os
 import xml.etree.ElementTree as ET
 from svg.path import parse_path, Line
 
-filename = 'pcb split.svg'
+filename = 'tests/pcb split.svg'
 outfolder = 'out'
 
 class SvgToPoly(object):
@@ -49,6 +50,9 @@ class SvgToPoly(object):
         csvFile = [("Index","X (mil)","Y (mil)","Arc Angle (Neg = CW)")]
         i = 0
         
+        if not os.path.exists(self.outFolder):
+            os.makedirs(self.outFolder)
+            
         f = open(self.outFolder + '/' + filename + '.csv', 'w+')
         
         for coordinate in data:
