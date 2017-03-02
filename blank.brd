@@ -23,11 +23,6 @@ Image Library.
 &lt;/p&gt;</description>
 <packages>
 <package name="WHATX">
-<rectangle x1="0.007621875" y1="0.00761875" x2="0.053340625" y2="0.02285625" layer="1"/>
-<rectangle x1="0.022859375" y1="0.022859375" x2="0.068578125" y2="0.038096875" layer="1"/>
-<rectangle x1="0.007621875" y1="0.0381" x2="0.083821875" y2="0.0533375" layer="1"/>
-<rectangle x1="0.022859375" y1="0.053340625" x2="0.099059375" y2="0.068578125" layer="1"/>
-<rectangle x1="0.007621875" y1="0.068578125" x2="0.114296875" y2="0.083815625" layer="1"/>
 </package>
 </packages>
 </library>
